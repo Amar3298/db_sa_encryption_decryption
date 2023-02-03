@@ -47,3 +47,7 @@ def decryptString(mesS):
     join_db = " "
     res = join_db.join(res_list)
     return res
+
+check = encryptString("Dragon Ball")
+print(check)
+print(decryptString(check))
