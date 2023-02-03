@@ -1,6 +1,6 @@
 from random import choice
 alpha_bets = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-def encodingDB(mes):
+def encryptionDB(mes):
     mes = mes.lower()
     if(len(mes)<3):
         return mes[::-1]
@@ -30,6 +30,14 @@ def decryptionDB(mes):
         res += new_str[:-1]
         res = res.capitalize()
         return res
-check = encodingDB("Dragon")
-print(check)
-print(decryptionDB(check))
+# check = encryptionDB("Dragon")
+# print(check)
+# print(decryptionDB(check))
+def encryptString(mesS):
+    list1 = mesS.split(" ")
+    res_list = list(map(lambda x:encryptionDB(x),list1))
+    join_db = " "
+    res = join_db.join(res_list)
+    # print(res_list)
+    return res
+# check = encryptString("Dragon Ball")
