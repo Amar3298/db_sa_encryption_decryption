@@ -41,3 +41,9 @@ def encryptString(mesS):
     # print(res_list)
     return res
 # check = encryptString("Dragon Ball")
+def decryptString(mesS):
+    list1 = mesS.split(" ")
+    res_list = list(map(lambda x:decryptionDB(x),list1))
+    join_db = " "
+    res = join_db.join(res_list)
+    return res
